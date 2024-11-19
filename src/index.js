@@ -3,9 +3,9 @@ require('dotenv').config();
 
 const app=express()
 
-app.get("/api/user",(req,res)=>{
-    res.send("get all users")
-})
+// app.get("/api/user",(req,res)=>{
+//     res.send("get all users")
+// })
 
 app.post("/api/user" , (req,res)=>{
     res.send("save user")
@@ -19,4 +19,4 @@ app.put("/api/user" , (req,res)=>{
     res.send("update user")
 })
 
-app.listenerCount(process.env.PORT)
+app.listen(process.env.PORT)
